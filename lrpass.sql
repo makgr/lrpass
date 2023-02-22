@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2023 at 07:51 PM
+-- Generation Time: Feb 22, 2023 at 07:11 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.25
 
@@ -80,6 +80,14 @@ CREATE TABLE `oauth_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `oauth_access_tokens`
+--
+
+INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('66f8d246cd88557043436e76c478f9d31b7b13df1309db9fdf69a4181fc65ca6aa051e75f43270e7', 1, 1, 'app', '[]', 0, '2023-02-22 12:08:12', '2023-02-22 12:08:12', '2024-02-22 18:08:12'),
+('bab708615fd7d45e195b961f6bda727f3bec6b54537ef5a3e037aa6aa8ca2b3e585e353c663d9d53', 1, 1, 'app', '[]', 0, '2023-02-22 12:10:00', '2023-02-22 12:10:00', '2024-02-22 18:10:00');
 
 -- --------------------------------------------------------
 
@@ -187,6 +195,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Mohammad Ali Khan', 'xvirus.bd@gmail.com', NULL, '$2y$10$hSE71AEtjodyP6KVTX5KSeYlnU5a1mVlVjBbZsFJ3I1yr5sd81VN.', NULL, '2023-02-22 12:08:11', '2023-02-22 12:08:11');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -282,7 +297,7 @@ ALTER TABLE `oauth_personal_access_clients`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -49,7 +49,7 @@ class AuthController extends Controller
             $token = $user->createToken('app')->accessToken;
 
             return response([
-                'message' => "Registration Successfull",
+                'message' => "Wow. Registration Successfull.",
                 'token' => $token,
                 'user' => $user
             ], 200);
